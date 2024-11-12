@@ -6,7 +6,8 @@ export default function Programadores({programadores}) {
     <>
           <ul>
             {programadoresList.map( ({nombre,experiencia}, i)=>(
-              <li key={i}>{nombre} {experiencia}{experiencia >4 ? <strong>(Senior)</strong>:<strong></strong>}
+              <li key={i}>{nombre}
+              {experiencia >4 && experiencia <10 ? <strong>(Senior)</strong>:null || experiencia >9 ? <strong>(Pro)</strong>:null}
               </li>
               ))}
           </ul>
