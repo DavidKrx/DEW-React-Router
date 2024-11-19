@@ -17,3 +17,8 @@
  ### 6º Ya podemos ver el código del proyecto, pero aún no lo podemos ejecutar porque tenemos que instalar sus dependencias, para ello ejecuta el siguiente comando en la terminal de VS Code: npm install
 
  ### 7º Ahora ya podemos ejecutar el proyecto/plantilla base. Abre una terminal en VS Code y ejecuta npm run dev
+Extensiones de Visual Studio Code:
+ESlint
+ES7+ React/Redux/React-Native snippets
+
+

@@ -1,20 +1,22 @@
 import PropTypes from 'prop-types';
-import useState from "react";
+import {useState} from "react";
 export default function Programadores({programadores}) {
   const [programadoresList, setProgramadoresList] = useState(programadores);
 
   return (
     <>
+      <div>hola</div>
           <ul>
             {programadoresList.map( ({nombre,experiencia}, i)=>(
               <li key={i}>{nombre}
-              {experiencia >4 && experiencia <10 ? <strong className={`wish-list_item`}>(Senior)</strong>:null}
+              {experiencia >4 ? <strong className={`wish-list_item`}>(Senior)</strong>:null}
               </li>
               ))}
           </ul>
-          <button type="button" onClick={()=> {setProgramadoresList(programadoresList.map(programador=> 
-          ({...programador,experiencia:programador.experiencia+1})
-        ))}}>
+
+          <button type="button" onClick={()=> {
+            setProgramadoresList(programadoresList.map(programador=>({...programador,experiencia:programador.experiencia+1})
+            ))}}>
             Añadir experiencia
           </button>
     </>
