@@ -1,5 +1,5 @@
 import './App.css'
-import Programadores from './Programadores'
+import ProgramadoresList from './Programadores.'
 
 let programadores = [
   {
@@ -19,6 +19,6 @@ let programadores = [
 
 export default function App() {  return (
 
-  <Programadores programadores={programadores}></Programadores>
+  <ProgramadoresList programadores={programadores} />
   )
 }

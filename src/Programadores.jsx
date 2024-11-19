@@ -1,4 +1,5 @@
-import React, {useState} from "react";
+import PropTypes from 'prop-types';
+import useState from "react";
 export default function Programadores({programadores}) {
   const [programadoresList, setProgramadoresList] = useState(programadores);
 
@@ -7,7 +8,7 @@ export default function Programadores({programadores}) {
           <ul>
             {programadoresList.map( ({nombre,experiencia}, i)=>(
               <li key={i}>{nombre}
-              {experiencia >4 && experiencia <10 ? <strong>(Senior)</strong>:null || experiencia >9 ? <strong>(Pro)</strong>:null}
+              {experiencia >4 && experiencia <10 ? <strong className={`wish-list_item`}>(Senior)</strong>:null}
               </li>
               ))}
           </ul>
@@ -19,3 +20,16 @@ export default function Programadores({programadores}) {
     </>
   )
 }
+
+Programadores.propTypes = {
+  programadores: PropTypes.arrayOf(
+    PropTypes.shape({
+      nombre: PropTypes.string.isRequired,
+      apellido1: PropTypes.string.isRequired,
+      apellido2: PropTypes.string.isRequired,
+      edad: PropTypes.number.isRequired,
+      experiencia: PropTypes.number.isRequired,
+      lenguajes: PropTypes.arrayOf(PropTypes.string).isRequired
+    })
+  ).isRequired
+};
