@@ -1,5 +1,6 @@
 import './App.css'
 import ProgramadoresList from './Programadores'
+import Header from './Header.jsx'
 
 let programadores = [
   {
@@ -18,6 +19,9 @@ let programadores = [
 
 export default function App() {  
   return (
-  <ProgramadoresList programadores={programadores}/>
+    <>
+      <Header/>
+      <ProgramadoresList programadores={programadores}/>
+    </>
   )
 }
