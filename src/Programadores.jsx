@@ -13,10 +13,6 @@ export default function Programadores({programadores}) {
     );
   }
 
-  function ala(b){
-    console.log(b);
-  }
-
   return (
     <>
           <ul>
@@ -35,10 +31,6 @@ export default function Programadores({programadores}) {
 
           <button type="button" onClick={incrementar}>
             Añadir experiencia
-          </button>
-          
-          <button type="button" onClick={()=>{ala("patata")}}>
-            ALA
           </button>
     </>
   )
