@@ -2,6 +2,8 @@ import './App.css'
 import ProgramadoresList from './Programadores'
 import DeportistasList from './David.jsx'
 import Header from './Header.jsx'
+//import Form from './persona.jsx' 
+import Contenedor from './Contenedor.jsx'
 
 let programadores = [
   {
@@ -44,14 +46,21 @@ let deportistas=[
                             {carrera: 'mediaMaraton',tiempoEnSegundos: 5985, distanciaKm: 21}
                           ]}
 ]
-
-
+/*
+let persona =
+  {
+      nombre: 'Antonio', esMayorDeEdad: true, ciclo:'medio'
+  }
+*/
 export default function App() {  
   return (
     <>
-      <Header/>
+      {/* <Header/>
       <ProgramadoresList programadores={programadores}/>
-      <DeportistasList deportistas={deportistas}/>
+      <DeportistasList deportistas={deportistas}/> */}
+      <Contenedor/>
     </>
   )
 }
+
+
