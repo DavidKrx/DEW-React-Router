@@ -18,6 +18,20 @@ export default function Contenedor() {
     return (
       <>
         <Form addPersona={addPersonas}/>
+        <table>
+      <tr>
+    <th>Nombre</th>
+    <th>Es mayor de edad</th>
+    <th>Ciclo</th>
+  </tr>
+  {personas.map(e=>
+    <tr>
+    <td>{e.nombre}</td>
+    <td>{e.esMayorDeEdad? "Si":"No"}</td>
+    <td>{e.ciclo}</td>
+  </tr>
+    )}
+</table>
       </>
     )
   }
