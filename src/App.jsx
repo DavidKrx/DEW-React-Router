@@ -1,9 +1,13 @@
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
 import ProgramadoresList from './Programadores'
 import DeportistasList from './David.jsx'
 import Header from './Header.jsx'
 //import Form from './persona.jsx' 
 import Contenedor from './Contenedor.jsx'
+import Layout from "./Layout";
+
 
 let programadores = [
   {
@@ -46,21 +50,22 @@ let deportistas=[
                             {carrera: 'mediaMaraton',tiempoEnSegundos: 5985, distanciaKm: 21}
                           ]}
 ]
-/*
-let persona =
-  {
-      nombre: 'Antonio', esMayorDeEdad: true, ciclo:'medio'
-  }
-*/
-export default function App() {  
+
+export default function App() {
   return (
-    <>
-      {/* <Header/>
-      <ProgramadoresList programadores={programadores}/>
-      <DeportistasList deportistas={deportistas}/> */}
-      <Contenedor/>
-    </>
-  )
+    <BrowserRouter>
+    <Routes>
+    <Route path="/" element={<Layout/>}>
+        <Route index element={ <ProgramadoresList programadores={programadores}/>} />
+        <Route path="deportistas" element={ <DeportistasList deportistas={deportistas}/>} />
+        <Route path="contenedor" element={  <Contenedor/>} />
+        <Route path="*" element={<Header/>} />
+      </Route>
+    </Routes>
+  </BrowserRouter>
+  );
 }
 
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App/>);
 
