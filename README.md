@@ -21,4 +21,6 @@ Extensiones de Visual Studio Code:
 ESlint
 ES7+ React/Redux/React-Native snippets
 
+## Routes
+npm i react-router-dom@6.0.2
 

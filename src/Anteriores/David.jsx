@@ -6,7 +6,8 @@ export default function Deportistas({deportistas}) {
 
   return (
     <>
-      <ul>
+    <main>
+    <ul>
         {deportistas.map(({ nombre, apellido1, apellido2}, i) => (
             <li key={i} className={i}>
             
@@ -17,6 +18,7 @@ export default function Deportistas({deportistas}) {
       <button type="button" onClick={()=> {setMayus(!mayus)}}>
        TOlower/ToUp
       </button>
+    </main>
     </>
   );
 }

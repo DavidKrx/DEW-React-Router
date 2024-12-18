@@ -1,12 +1,13 @@
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import './App.css'
-import ProgramadoresList from './Programadores'
-import DeportistasList from './David.jsx'
-import Header from './Header.jsx'
 //import Form from './persona.jsx' 
-import Contenedor from './Contenedor.jsx'
+import Contenedor from './Anteriores/Contenedor.jsx'
 import Layout from "./Layout";
+import Inicio from "./curso/Inicio.jsx";
+import Centro from "./curso/Centro.jsx";
+import Grupo from "./curso/Grupo.jsx";
+import Daw2 from "./curso/Daw2.jsx";
 
 
 let programadores = [
@@ -56,16 +57,29 @@ export default function App() {
     <BrowserRouter>
     <Routes>
     <Route path="/" element={<Layout/>}>
-        <Route index element={ <ProgramadoresList programadores={programadores}/>} />
-        <Route path="deportistas" element={ <DeportistasList deportistas={deportistas}/>} />
-        <Route path="contenedor" element={  <Contenedor/>} />
-        <Route path="*" element={<Header/>} />
+        <Route index element={ <Inicio/>} />
+        <Route path="Centro" element={<Centro/>} />
+        <Route path="/Daw2" element={<Daw2/>} />
+        <Route path="/grupo/:letra" element={<Grupo/>}/>
+        <Route path="Contenedor" element={<Contenedor/>} />
+        <Route path="*" element={<Navigate to="/"/>} />
       </Route>
     </Routes>
   </BrowserRouter>
   );
 }
-
+/*    
+<BrowserRouter>
+    <Routes>
+    <Route path="/" element={<Layout/>}>
+        <Route index element={ <ProgramadoresList programadores={programadores}/>} />
+        <Route path="deportistas" element={ <DeportistasList deportistas={deportistas}/>} />
+        <Route path="contenedor" element={  <Contenedor/>} />
+        <Route path="header" element={<Header/>} />
+        <Route path="*" element={<Navigate to="/"/>} />
+      </Route>
+    </Routes>
+</BrowserRouter>*/
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App/>);
 
