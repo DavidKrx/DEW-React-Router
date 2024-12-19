@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const alumnos=[
     {grupo:"A",nombre:"Juan"},
@@ -9,19 +9,19 @@ const alumnos=[
     {grupo:"B",nombre:"Amanda"},
 ];
 export default function Grupo(){
+const nave=useNavigate();
 const {letra}=useParams();
         return( 
             <>
-         <main>
          <h1>Cursos 2º DAW</h1>
          <ul>
-         {alumnos.filter(alumno=>alumno.grupo==letra).map({nombre}, i=>
-            <li key={i}>{nombre}</li>
-         )}
+            {
+                alumnos.filter(alumno=>alumno.grupo==letra).map(({nombre}, i)=>
+                <li key={i}>{nombre}</li>
+            )}
          </ul>
 
-
-         </main>
+         <Link to={`/addAlumno/${letra}`}>Añadir Alumno</Link>
        </>
     )
 }

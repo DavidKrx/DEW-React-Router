@@ -11,7 +11,6 @@ export default function Daw2(){
          <li key={grupo}>
         <Link to={`/grupo/${grupo}`}>2º DAW {grupo}</Link>
          </li>
-      
          )}
          </ul>
 

@@ -8,7 +8,7 @@ import Inicio from "./curso/Inicio.jsx";
 import Centro from "./curso/Centro.jsx";
 import Grupo from "./curso/Grupo.jsx";
 import Daw2 from "./curso/Daw2.jsx";
-
+import addAlumno from "./curso/addAlumno.jsx";
 
 let programadores = [
   {
@@ -61,6 +61,7 @@ export default function App() {
         <Route path="Centro" element={<Centro/>} />
         <Route path="/Daw2" element={<Daw2/>} />
         <Route path="/grupo/:letra" element={<Grupo/>}/>
+        <Route path="/addAlumno/:letra" element={<addAlumno/>}/>
         <Route path="Contenedor" element={<Contenedor/>} />
         <Route path="*" element={<Navigate to="/"/>} />
       </Route>
