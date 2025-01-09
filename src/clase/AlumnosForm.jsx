@@ -99,7 +99,7 @@ export default function AlumnosForm ( {alumnos, setAlumnos}) {
             onChange={handleChange}
             hidden={idRuta ? true : false}
           />
-          {errors.id && <span>{errors.id}</span>}
+          {errors.id && <span className='errorMessage'>{errors.id}</span>}
         </div>
 
         <div>
@@ -110,7 +110,7 @@ export default function AlumnosForm ( {alumnos, setAlumnos}) {
             value={formData.nombre}
             onChange={handleChange}
           />
-          {errors.nombre && <span>{errors.nombre}</span>}
+          {errors.nombre && <span className='errorMessage'>{errors.nombre}</span>}
         </div>
 
         <div>
@@ -125,7 +125,7 @@ export default function AlumnosForm ( {alumnos, setAlumnos}) {
               <option key={grupo} value={grupo}>{grupo}</option>
             ))}
           </select>
-          {errors.grupo && <span>{errors.grupo}</span>}
+          {errors.grupo && <span className='errorMessage'>{errors.grupo}</span>}
         </div>
 
         <button type="submit">{idRuta ? 'Actualizar' : 'Añadir'}</button>
