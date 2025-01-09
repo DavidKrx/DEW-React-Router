@@ -5,7 +5,6 @@ export default class Centro extends Component {
         return <>
          <main>
          <h1>Centro</h1>
-
          </main>
        </>
     }

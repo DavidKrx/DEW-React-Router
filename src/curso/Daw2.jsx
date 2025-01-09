@@ -1,5 +1,5 @@
 import { Outlet, Link } from "react-router-dom";
-export const grupos=["A","B","C"];
+import { grupos } from "../App";
 
 export default function Daw2(){
         return( 
