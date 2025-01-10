@@ -11,7 +11,6 @@ export default function AlumnosForm ( {alumnos, setAlumnos}) {
   useEffect(() => {
     if (idRuta) {
       const alumno = alumnos.find((alumno) => alumno.id == parseInt(idRuta));
-      console.log("Valor de alumno:"+alumno); // Verifica si el alumno es encontrado
       if (alumno) {
         setFormData({ ...alumno });
       }
@@ -91,7 +90,7 @@ export default function AlumnosForm ( {alumnos, setAlumnos}) {
       <h2>{idRuta ? 'Editar Alumno' : 'Añadir Alumno'}</h2>
       <form onSubmit={idRuta ? editSubmit:addSubmit}>
         <div>
-          <label>ID</label>
+          <label hidden={idRuta ? true : false}>ID</label>
           <input
             type="text"
             name="id"
