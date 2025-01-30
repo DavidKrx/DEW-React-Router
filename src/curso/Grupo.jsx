@@ -12,7 +12,7 @@ const {letra}=useParams();
                 <li key={i}>{nombre}</li>
             )}
          </ul>
-         <button><Link to='/nuevo'>Nuevo Alumno</Link></button>
+         <button><Link to='/alumnos/nuevo'>Nuevo Alumno</Link></button>
        </>
     )
 }

@@ -47,7 +47,7 @@ export default function AlumnosForm ( {alumnos, setAlumnos}) {
       // Si estamos editando, actualizamos el alumno
     setAlumnos((prevAlumnos) =>
         prevAlumnos.map((alumno) =>
-          alumno.id === parseInt(id) ? formData : alumno
+          alumno.id == id ? formData : alumno
       )
     );
 
@@ -60,11 +60,12 @@ export default function AlumnosForm ( {alumnos, setAlumnos}) {
     let formErrors = {};
 
     // Validaciones
-    
+    /*Validacion para numero entero
     if (!id || isNaN(id)) {
       formErrors.id = 'El ID es obligatorio y debe ser un número válido';
     }
-    if (alumnos.some((alumno) => alumno.id === parseInt(formData.id))) {
+      */
+    if (alumnos.some((alumno) => alumno.id === formData.id)) {
       formErrors.id = 'El ID ya existe';
     }
 

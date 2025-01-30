@@ -9,7 +9,7 @@ export default function AlumnosList ({ alumnos, setAlumnos }) {
   };
 
   const handleEdit = (id) => {
-    navigate(`/editar/${id}`);
+    navigate(`/alumnos/editar/${id}`);
   };
 
   return (
@@ -38,7 +38,7 @@ export default function AlumnosList ({ alumnos, setAlumnos }) {
           ))}
         </tbody>
       </table>
-      <button><Link to='/nuevo'>Nuevo Alumno</Link></button>
+      <button><Link to='/alumnos/nuevo'>Nuevo Alumno</Link></button>
     </div>
   );
 };

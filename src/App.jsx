@@ -6,7 +6,8 @@ import Inicio from "./curso/Inicio.jsx";
 import Grupo from "./curso/Grupo.jsx";
 import Daw2 from "./curso/Daw2.jsx";
 import Layout from "./Layout";
-
+import Rickandmortyapi from './apiRequest/rickandmortyapi.jsx';
+import Alumnosapi from './apiRequest/alumnosapi.jsx'
 // Datos iniciales
 const alumnosData = [
   { id: 1, grupo: "A", nombre: "Juan" },
@@ -30,8 +31,10 @@ export default function App(){
           <Route path="/Daw2" element={<Daw2/>} />
           <Route path="/grupo/:letra" element={<Grupo alumnos={alumnos}/>}/>
           <Route path="/alumnos" element={<AlumnosList alumnos={alumnos} setAlumnos={setAlumnos} />} />
-          <Route path="/nuevo" element={<AlumnosForm alumnos={alumnos} setAlumnos={setAlumnos} />} />
-          <Route path="/editar/:id" element={<AlumnosForm alumnos={alumnos} setAlumnos={setAlumnos} />} />
+          <Route path="/alumnos/nuevo" element={<AlumnosForm alumnos={alumnos} setAlumnos={setAlumnos} />} />
+          <Route path="/alumnos/editar/:id" element={<AlumnosForm alumnos={alumnos} setAlumnos={setAlumnos} />} />
+          <Route path="/ricki" element={<Rickandmortyapi/>} />
+          <Route path="/alumApi" element={<Alumnosapi/>} />
         </Route>
         </Routes>
     </BrowserRouter>

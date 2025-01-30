@@ -16,6 +16,13 @@ const Layout = () => {
           <li>
             <Link to="/alumnos">Ver Alumnos</Link></li>
         </ul>
+        <Link to="/ricki">
+              Ricki
+            </Link>
+            <Link to="/alumApi">
+            alumoApi
+            </Link>
+            
       </nav>
 
       <Outlet />
