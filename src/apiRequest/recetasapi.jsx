@@ -21,7 +21,7 @@ export default function recetasapi() {
   
       useEffect(() => {
         setTimeout(() => {fechito()}, 5000 );
-      }, [])
+      }, [data])
 
     if(!loader){
       return "Cargando ..."
