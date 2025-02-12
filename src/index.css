@@ -101,6 +101,59 @@ button:focus-visible {
 .errorMessage {
   color: red;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 1rem;
+}
+.grid > div {
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.actions{
+  display: flex;
+  justify-content: space-between;
+}
+
+img:hover {
+  cursor:pointer;
+  scale: 0.9;
+}
+.container-tags{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tags{
+  margin: 1rem;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 50px 20px;
+  background-color: #c7965f;
+}
+.detailsCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  margin-right: 20rem;
+  margin-left: 20rem;
+}
+.detailsCard  img {
+  align-items: center;
+ width: 40rem;
+ height: 40rem;
+}
+.imageCardContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

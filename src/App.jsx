@@ -9,6 +9,7 @@ import Layout from "./Layout";
 import Rickandmortyapi from './apiRequest/rickandmortyapi.jsx';
 import Alumnosapi from './apiRequest/alumnosapi.jsx'
 import Recetasapi from './apiRequest/recetasapi.jsx'; 
+import RecetaDetalles from './apiRequest/recetaDetalles.jsx'
 // Datos iniciales
 const alumnosData = [
   { id: 1, grupo: "A", nombre: "Juan" },
@@ -35,7 +36,8 @@ export default function App(){
           <Route path="/alumnos/nuevo" element={<AlumnosForm alumnos={alumnos} setAlumnos={setAlumnos} />} />
           <Route path="/alumnos/editar/:id" element={<AlumnosForm alumnos={alumnos} setAlumnos={setAlumnos} />} />
           <Route path="/ricki" element={<Rickandmortyapi/>} />
-          <Route path="/alumApi" element={<Recetasapi />} />
+          <Route path="/recetApi" element={<Recetasapi />} />
+          <Route path="/recetApi/detalles/:id" element={<RecetaDetalles/>} />
         </Route>
         </Routes>
     </BrowserRouter>

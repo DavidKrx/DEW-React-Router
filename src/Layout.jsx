@@ -19,12 +19,10 @@ const Layout = () => {
         <Link to="/ricki">
               Ricki
             </Link>
-            <Link to="/alumApi">
-            alumoApi
+            <Link to="/recetApi">
+            RecetasApi
             </Link>
-            
       </nav>
-
       <Outlet />
     </>
   )
